@@ -1,0 +1,18 @@
+pymapquest
+A Python Library for The MapQuest Open Platform Web Services
+
+Bug tracker: http://github.com/omniar/pymapquest/issues
+
+Souce code: 
+    Library: http://github.com/omniar/pymapquest
+
+Author: Omniar (see AUTHORS for more information)
+License: MIT
+Dependencies:
+  Python 2.4 or newer
+  Simplejson <http://undefined.org/python/#simplejson>
+    **Included in python 2.6+
+    
+Notes:
+  This code is based on Tweepy by Joshua Roesslein
+  - http://github.com/joshthecoder/tweepy
