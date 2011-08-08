@@ -83,8 +83,7 @@ def bind_api(**config):
                 # Open connection
                 # FIXME: add timeout
                 conn = httplib.HTTPConnection(self.host)
-                
-                print(self.host, self.method, url, self.post_data, self.parameters)
+
                 # Execute request
                 try:
                     conn.request(self.method, url, headers=self.headers, body=self.post_data)
