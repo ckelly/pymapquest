@@ -10,7 +10,7 @@ __author__ = 'Omniar'
 __license__ = 'MIT'
 
 from mapquest.error import MapQuestError
-from mapquest.api import API
+from mapquest.api import OpenAPI, LicensedAPI
 
 def debug(enable=True, level=1):
     

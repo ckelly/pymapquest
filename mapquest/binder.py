@@ -38,6 +38,8 @@ def bind_api(**config):
             self.build_path()
             self.scheme = 'http://'    
             self.host = api.host
+            
+            self.key = api.key
 
         def build_parameters(self, args, kargs):
             self.parameters = {}
@@ -75,6 +77,13 @@ def bind_api(**config):
                 
             if len(self.parameters):
                 url = '%s?%s' % (url, urllib.urlencode(self.parameters))
+                # mapquest api keys don't always pass through URL encoding properly
+                # so we'll add it to the end of the url as-is
+                if self.key:
+                    url += '&%s=%s' % ('key', self.key)
+            else:
+                if self.key:
+                    url = '%s?%s=%s' % (url, 'key', self.key)
 
             # Continue attempting request until successful
             # or maximum number of retries is reached.
